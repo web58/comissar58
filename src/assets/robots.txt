@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /*.js
+Allow: /*.css
+
+User-agent: Googlebot
+Allow: /*.js
+Allow: /*.css
+
+User-agent: Yandex
+Allow: /*.js
+Allow: /*.css
+
+Host: https://xn---58-5cd3blopvia.xn--p1ai/

@@ -1,0 +1,41 @@
+.contacts {
+  &__item {
+    margin-bottom: 8px;
+  }
+
+  &__phone {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  &__warn-text {
+    font-size: 15px;
+    color: var(--accent);
+  }
+
+  @include media-min ($sm) {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 25px;
+      row-gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    &__item {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-min ($lg) {
+    &__phone {
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}

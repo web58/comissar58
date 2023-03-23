@@ -1,0 +1,46 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="radio"].visually-hidden,
+input[type="checkbox"].visually-hidden {
+  @include visually-hidden;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.indent-reset {
+  @include indent-reset;
+}
+
+.list-reset {
+  @include list-reset;
+}
+
+.btn-reset {
+  @include btn-reset;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 715px;
+
+  @include media-min ($lg) {
+    max-width: 934px;
+  }
+
+  @include media-min ($lgx) {
+    max-width: 1076px;
+  }
+
+  @include media-min ($xl) {
+    max-width: 1150px;
+  }
+
+  @include media-min ($xxl) {
+    max-width: 1630px;
+  }
+}

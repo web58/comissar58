@@ -1,0 +1,128 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../img/main-cover-gragient.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+
+  &__wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  &__bottom {
+    padding: 35px 0 70px;
+    flex-shrink: 0;
+    background-image: linear-gradient(to bottom, transparent 0, var(--white) 15%);
+  }
+
+  &__title {
+    font-size: 20px;
+    padding-bottom: 40px;
+    background-image: linear-gradient(to top, transparent 0, var(--white) 35%, var(--white) 70%);
+  }
+
+  &__title-big {
+    display: block;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  &__contacts {
+    display: none;
+  }
+
+  @include media-min($md) {
+    padding-top: 30px;
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__title-big {
+      font-size: 48px;
+    }
+  }
+
+  @include media-min($lg) {
+    padding-top: 0;
+    background-image: url('../img/main-cover.jpg');
+    background-size: cover;
+    align-items: flex-end;
+
+    &__wrapper {
+      position: relative;
+      z-index: 2;
+      padding-left: 40px;
+      padding-right: max(40px, calc((100% - 904px) / 2));
+      width: 50%;
+      background-color: var(--white);
+    }
+
+    &__top {
+      flex-grow: 0;
+      text-align: left;
+      background-image: none;
+      margin-bottom: 50px;
+    }
+
+    &__bottom {
+      background-image: none;
+      padding: 0;
+    }
+
+    &__contacts {
+      display: block;
+      padding-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      background-image: none;
+      padding-bottom: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  @include media-min($lgx) {
+    &__wrapper {
+      padding-left: 60px;
+      padding-right: max(60px, calc((100% - 1046px) / 2));
+      width: 50%;
+      background-color: var(--white);
+    }
+
+    &__contacts {
+      margin-bottom: 60px;
+    }
+  }
+
+  @include media-min($xl) {
+    &__wrapper {
+      padding-left: 70px;
+      padding-right: max(70px, calc((100% - 1120px) / 2));
+      width: 50%;
+      background-color: var(--white);
+    }
+
+    &__top {
+      margin-bottom: 60px;
+    }
+
+    &__contacts {
+      margin-bottom: 96px;
+    }
+
+    &__title {
+      margin-bottom: 50px;
+    }
+  }
+}

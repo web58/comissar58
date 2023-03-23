@@ -1,0 +1,30 @@
+.header {
+  padding: 18px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  @include media-min ($md) {
+    padding: 20px 0;
+  }
+
+  @include media-min ($lg) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 0;
+
+    &__contacts {
+      display: none;
+    }
+  }
+}
