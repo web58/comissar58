@@ -11,6 +11,17 @@
     flex-shrink: 0;
   }
 
+  &__adress {
+    text-align: right;
+    margin-bottom: 12px;
+  }
+
+  @include media-min ($sm) {
+    &__adress {
+      display: none;
+    }
+  }
+
   @include media-min ($md) {
     padding: 20px 0;
   }

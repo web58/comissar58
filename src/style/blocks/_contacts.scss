@@ -15,6 +15,10 @@
     color: var(--accent);
   }
 
+  &__item--adress {
+    display: none;
+  }
+
   @include media-min ($sm) {
     &__list {
       display: grid;
@@ -26,6 +30,11 @@
 
     &__item {
       margin-bottom: 0;
+
+      &--adress {
+        display: block;
+        grid-column: span 2;
+      }
     }
   }
 
