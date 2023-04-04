@@ -20,6 +20,10 @@ input[type="checkbox"].visually-hidden {
   @include btn-reset;
 }
 
+.is-hidden {
+  visibility: hidden;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
